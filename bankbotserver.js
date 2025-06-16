@@ -302,6 +302,13 @@ app.post("/upload-ocr-result", async (req, res) => {
                 "Look for BNPL providers such as: Klarna, Clearpay, Laybuy, Zilch, Payl8r, DivideBuy, Snap Finance, PayPal Pay in 3, Flexifi, Humm, Openpay, Affirm, Sezzle, Zip, Afterpay. [DO NOT list key words in the response]\n" +
                 "If found, include this summary:\n" +
                 "BNPL Summary: [List of BNPL transactions with total amount]\n\n" +
+
+                "📋 **Other Credit or Loan Repayments:**\n" +
+                "This also does not result in a decline but should be **summarized**.\n" +
+                "Look for transactions related to personal loans, credit cards, or finance providers.\n" +
+                "Include keywords or provider names such as: Capital One, Vanquis, Aqua, Barclaycard, MBNA, Tesco Bank, Sainsbury’s Bank, Likely Loans, Everyday Loans, Avant, Fund Ourselves, 118 118 Money, Drafty, Lending Stream, Bamboo Loans, Amigo Loans, TrustTwo, Oakam, Dot Dot Loans, SafetyNet, Zopa, Tappily, CashFloat, Sunny, MyJar, WageDay Advance, PayDay UK, Provident, Credit Spring, TotallyMoney, ClearScore, CashPlus, Loqbox, and any transaction including keywords like **‘credit’, ‘loan’, ‘finance’, ‘repayment’, ‘instalment’**, or **‘monthly payment’**. [DO NOT list keywords in the response]\n" +
+                "If found, include this summary:\n" +
+                "Credit/Loan Summary: [List of loan provider names with total amounts]\n\n"+
               
                 "✅ **Decision Format:**\n" +
                 "Decision MUST be first in the response and only show one desicion either 'PASSED' or 'DECLINED'\n" +
